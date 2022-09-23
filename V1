@@ -1,0 +1,484 @@
+/** PROPIEDAD DE JAN CARLOS HERRERA GALLARDO
+ * CUBO */
+#include <stdbool.h>
+#include <stdint.h>
+#include "inc/tm4c1294ncpdt.h"
+
+cora();
+
+int main(void){
+int t,k,RET,INTERM;
+k=1;
+RET=1000;
+        INTERM = 100000000;
+   SYSCTL_RCGCGPIO_R |= 0x2E1A;
+
+   GPIO_PORTE_AHB_DIR_R |= 0x1F;
+   GPIO_PORTE_AHB_DEN_R |= 0x1F;
+   GPIO_PORTE_AHB_DR4R_R |= 0x1F;
+   GPIO_PORTD_AHB_DIR_R |= 0x0F;
+   GPIO_PORTD_AHB_DEN_R |= 0x0F;
+   GPIO_PORTD_AHB_PDR_R |= 0x0F;
+   GPIO_PORTB_AHB_DIR_R |= 0x20;
+   GPIO_PORTB_AHB_DEN_R |= 0x20;
+   GPIO_PORTP_DIR_R |= 0x1F;
+   GPIO_PORTP_DEN_R |= 0x1F;
+   GPIO_PORTP_DR4R_R |= 0x1F;
+   GPIO_PORTM_DIR_R |= 0x1F;
+   GPIO_PORTM_DEN_R |= 0x1F;
+   GPIO_PORTM_DR4R_R |= 0x1F;
+   GPIO_PORTK_DIR_R |= 0x1F;
+   GPIO_PORTK_DEN_R |= 0x1F;
+   GPIO_PORTK_DR4R_R |= 0x1F;
+   GPIO_PORTL_DIR_R |= 0x1F;
+   GPIO_PORTL_DEN_R |= 0x1F;
+   GPIO_PORTL_DR4R_R |= 0x1F;
+
+    while(k==1){
+
+        //PUERTOE
+        //SECCION 1
+       GPIO_PORTB_AHB_DATA_R = 0x20;
+       GPIO_PORTD_AHB_DATA_R = 0x00;
+       GPIO_PORTE_AHB_DATA_R = 0X01;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X02;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X04;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X08;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X10;
+       for(t=0 ; t<RET ; t++);
+       //SECCION 2
+       GPIO_PORTB_AHB_DATA_R = 0x00;
+       GPIO_PORTD_AHB_DATA_R = 0x01;
+       GPIO_PORTE_AHB_DATA_R = 0X01;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X02;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X04;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X08;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X10;
+       for(t=0 ; t<RET ; t++);
+
+       //SECCION 3
+       GPIO_PORTB_AHB_DATA_R = 0x00;
+       GPIO_PORTD_AHB_DATA_R = 0x02;
+       GPIO_PORTE_AHB_DATA_R = 0X01;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X02;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X04;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X08;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X10;
+       for(t=0 ; t<RET ; t++);
+
+       //SECCION 4
+       GPIO_PORTB_AHB_DATA_R = 0x00;
+       GPIO_PORTD_AHB_DATA_R = 0x04;
+       GPIO_PORTE_AHB_DATA_R = 0X01;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X02;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X04;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X08;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X10;
+       for(t=0 ; t<RET ; t++);
+
+       //SECCION5
+       GPIO_PORTB_AHB_DATA_R = 0x00;
+       GPIO_PORTD_AHB_DATA_R = 0x08;
+       GPIO_PORTE_AHB_DATA_R = 0X01;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X02;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X04;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X08;
+       for(t=0 ; t<RET ; t++);
+       GPIO_PORTE_AHB_DATA_R = 0X10;
+       for(t=0 ; t<RET ; t++);
+
+
+
+
+        //PUERTO P
+            GPIO_PORTB_AHB_DATA_R = 0x20;
+            GPIO_PORTD_AHB_DATA_R = 0x00;
+            GPIO_PORTP_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+            //SECCION 2
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x01;
+            GPIO_PORTP_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION 3
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x02;
+            GPIO_PORTP_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION 4
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x04;
+            GPIO_PORTP_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION5
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x08;
+            GPIO_PORTP_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTP_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //PUERTO M
+            GPIO_PORTB_AHB_DATA_R = 0x20;
+            GPIO_PORTD_AHB_DATA_R = 0x00;
+            GPIO_PORTM_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+            //SECCION 2
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x01;
+            GPIO_PORTM_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION 3
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x02;
+            GPIO_PORTM_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION 4
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x04;
+            GPIO_PORTM_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+            //SECCION5
+            GPIO_PORTB_AHB_DATA_R = 0x00;
+            GPIO_PORTD_AHB_DATA_R = 0x08;
+            GPIO_PORTM_DATA_R = 0X01;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X02;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X04;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X08;
+            for(t=0 ; t<RET ; t++);
+            GPIO_PORTM_DATA_R = 0X10;
+            for(t=0 ; t<RET ; t++);
+
+    //PUERTO K
+        GPIO_PORTB_AHB_DATA_R = 0x20;
+        GPIO_PORTD_AHB_DATA_R = 0x00;
+        GPIO_PORTK_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+        //SECCION 2
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x01;
+        GPIO_PORTK_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION 3
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x02;
+        GPIO_PORTK_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION 4
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x04;
+        GPIO_PORTK_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION5
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x08;
+        GPIO_PORTK_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+    //PUERTO L
+        GPIO_PORTB_AHB_DATA_R = 0x20;
+        GPIO_PORTD_AHB_DATA_R = 0x00;
+        GPIO_PORTL_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+        //SECCION 2
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x01;
+        GPIO_PORTL_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION 3
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x02;
+        GPIO_PORTL_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION 4
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x04;
+        GPIO_PORTL_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+        //SECCION5
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x08;
+        GPIO_PORTL_DATA_R = 0X01;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X02;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X04;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X08;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0X10;
+        for(t=0 ; t<RET ; t++);
+
+       /* //INTERMITENCIA
+        GPIO_PORTE_AHB_DATA_R = 0x00;
+        GPIO_PORTP_DATA_R = 0x00;
+        GPIO_PORTM_DATA_R = 0x00;
+        GPIO_PORTK_DATA_R = 0x00;
+        GPIO_PORTL_DATA_R = 0x00;
+        for(t=0 ; t<INTERM ; t++);
+*/
+    }
+cora(RET,t);
+    }
+
+int cora(RET,t){
+    while(1){
+     //RELLENO BASE
+        GPIO_PORTB_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x08;
+        GPIO_PORTL_DATA_R = 0x1F;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTL_DATA_R = 0x00;
+        GPIO_PORTK_DATA_R = 0x1F;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTK_DATA_R = 0x00;
+        GPIO_PORTM_DATA_R = 0x1F;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTM_DATA_R = 0x00;
+        GPIO_PORTP_DATA_R = 0x1F;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTP_DATA_R = 0x00;
+        GPIO_PORTE_AHB_DATA_R = 0x1F;
+        for(t=0 ; t<RET ; t++);
+        GPIO_PORTE_AHB_DATA_R = 0x00;
+        GPIO_PORTD_AHB_DATA_R = 0x00;
+        for(t=0 ; t<RET ; t++);
+   //FASE1
+    GPIO_PORTB_AHB_DATA_R = 0x00;
+    GPIO_PORTD_AHB_DATA_R = 0x04;
+    GPIO_PORTM_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTM_DATA_R = 0x00;
+    GPIO_PORTD_AHB_DATA_R = 0x00;
+    for(t=0 ; t<RET ; t++);
+   //FASE2
+    GPIO_PORTD_AHB_DATA_R = 0x02;
+    GPIO_PORTP_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTP_DATA_R = 0x00;
+    GPIO_PORTM_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTM_DATA_R = 0x00;
+    GPIO_PORTK_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTD_AHB_DATA_R = 0x00;
+    for(t=0 ; t<RET ; t++);
+    //FASE3
+    GPIO_PORTD_AHB_DATA_R = 0x01;
+    GPIO_PORTL_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTL_DATA_R = 0x00;
+    GPIO_PORTK_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTM_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTM_DATA_R = 0x00;
+    GPIO_PORTP_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTM_DATA_R = 0x00;
+    GPIO_PORTE_AHB_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTE_AHB_DATA_R = 0x00;
+    GPIO_PORTD_AHB_DATA_R = 0x00;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTB_AHB_DATA_R = 0x20;
+    GPIO_PORTK_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTP_DATA_R = 0x1F;
+    for(t=0 ; t<RET ; t++);
+    GPIO_PORTP_DATA_R = 0x00;
+    GPIO_PORTB_AHB_DATA_R = 0x00;
+
+    /*
+    GPIO_PORTL_DATA_R = 0x00;
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTM_DATA_R = 0x00;
+    GPIO_PORTP_DATA_R = 0x00;
+    GPIO_PORTE_AHB_DATA_R = 0x00;
+
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTL_DATA_R = 0x00;
+    GPIO_PORTK_DATA_R = 0x00;
+    GPIO_PORTL_DATA_R = 0x00;
+
+    */}
+
+}
