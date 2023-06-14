@@ -12,7 +12,11 @@ int t,k,RET,INTERM,rot,c;
 int main(void){
 //int t,k,RET,INTERM;
 k=1;
-RET=100000;		
+RET=100000
+//PARA K1=RET=100000
+//PARA K2=RET=100000
+//para k=3 RET=100000
+//PARA K4=RET=1000
         INTERM = 500;
         rot=1500;
    SYSCTL_RCGCGPIO_R |= 0x2E1A;
